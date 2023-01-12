@@ -1,0 +1,51 @@
+Slip No. 7
+Q. Write a program for web feed. 
+
+1) Define the source, by the channel tag
+The channel will be the same for all your RSS feeds. These tags are required:
+- title: the title of your website, may be the one in the title tag of the home page.
+- link: the URL of your website: example: https://www.xul.fr
+2) Add an image
+This is optional. Design a small image (88x31 for example) in a common format (gif, jpg, png) and put in into the same directory that the RSS file.
+The "image" tag is a sub-element of the channel tag
+- url is the address of the image itself.
+- link is the address of the page displayed when one clicks on the image.
+3) Add a new
+Now, we will add a web page to display an information. This is an "item" tag, a sub-element of channel, and this components are required:
+- title: the title of the article.
+- link: the URL of the page.
+4) Add more items
+More items may be added to this channel.
+
+5) Upload the file
+Put the feed.xml file into your website, among other web pages.
+6) Validate the file
+You may use this online RSS feed validator.
+7) Make it available
+This is accomplished by adding an RSS button on the home page. A click on the button should display the XML file you have created
+8) Updating the feed
+To publish further articles, you have just to add items, and remove older ones to keep the number of articles constant.
+
+
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+  <title>Ajax and XUL</title>
+  <link>https://www.xul.fr/en/</link>
+  <description>XML graphical interface etc...</description>
+  <image>
+      <url>https://www.xul.fr/xul-icon.gif</url>
+      <link>https://www.xul.fr/en/index.php</link>
+  </image>
+  <item>
+      <title>News  of today</title>
+      <link>https://www.xul.fr/en-xml-rss.html</link>
+      <description>All you need to know about RSS</description>
+  </item>
+  <item>
+      <title>News of tomorrows</title>
+      <link>https://www.xul.fr/en-xml-rdf.html</link>
+      <description>And now, all about RDF</description>
+    </item>
+</channel>
+</rss> 
